@@ -2,6 +2,20 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# b-tree implementation in javascript
+
+- https://levelup.gitconnected.com/building-a-b-tree-in-javascript-4482dee083cb
+
+## notes
+
+- every BTree has a root (BTreeNode)
+- every BTreeNode has the following attributes:
+  - leaf (boolean): is leaf or not
+  - values (number[]): list of all values stored in order, so that `BTree.values[i] <= BTree.value[i+1]`
+  - children (BTreeNode[]): list of sub-tree children
+- 4 basic operations in a BTreeNode
+- all of these functions keep the array of references of values as small as possible using array.splice() - array mutation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+
 ## Getting Started
 
 First, run the development server:
